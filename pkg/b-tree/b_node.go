@@ -41,6 +41,7 @@ func offsetPos(node BNode, idx uint16) uint16 {
 	assertions.Assert(1 <= idx && idx <= node.nkeys())
 	return utils.HEADER + 8*node.nkeys() + 2*(idx-1)
 }
+
 func (node BNode) getOffset(idx uint16) uint16 {
 	if idx == 0 {
 		return 0
